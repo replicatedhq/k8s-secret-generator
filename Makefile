@@ -10,6 +10,3 @@ image: build
 
 push: image
 	docker push replicated/k8s-secret-generator
-
-run: image
-	docker run replicated/k8s-secret-generator
