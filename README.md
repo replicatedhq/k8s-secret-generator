@@ -22,14 +22,15 @@ data:
 ## Params
 | Flag | Usage |
 | ---- | ----- |
-| name | Required. The metadata.name for the Secret object |
-| key | The key within the Secret data where the generated secret will be saved. Defaults to `data` |
-| length | Byte length of the secret. Defaults to 32 |
+| name | Required. The `metadata.name` for the Secret object. |
+| key | The key within the Secret data where the generated secret will be saved. Defaults to `data`. |
+| length | Byte length of the secret. Defaults to `32`. |
 | base64encode | Encode the random bytes as a base64 string before saving. This is separate to the base64 encoding applied by Kubernetes to store the secret. Default is `false`. |
 | namespace | The namespace the Secret will be created in. Defaults to `default`. |
 
 ## Authorization
-Your default `kubectl` user may not have permission to create the Role and RoleBinding required for the ServiceAccount to create a Secret resource. To apply the yaml as an admin user on GKE run the following commands:
+Your default `kubectl` user may not have permission to create the Role and RoleBinding required for the ServiceAccount to create a Secret resource in cluster.
+To apply the yaml as an admin user on GKE run the following commands:
 
 ```
 gcloud container clusters update my-cluster --enable-basic-auth
